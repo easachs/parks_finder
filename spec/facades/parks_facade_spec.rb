@@ -7,9 +7,4 @@ RSpec.describe 'ParksFacade' do
     expect(parks.first).to be_a(Park)
     expect(parks.first.full_name).to be_a(String)
   end
-
-  it 'returns total number of parks in a state', vcr: 'tn_parks' do
-    total = ParksFacade.total_in("TN")
-    expect(total).to eq("15")
-  end
 end

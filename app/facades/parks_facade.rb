@@ -4,8 +4,4 @@ class ParksFacade
       Park.new(park_data)
     end
   end
-
-  def self.total_in(state)
-    ParksService.parks_in(state)[:total]
-  end
 end

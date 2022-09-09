@@ -1,5 +1,5 @@
 <% if @state.present? %>
-  <h1><%= @total %> results for parks in <%= @state %></h1>
+  <h1><%= @parks.count %> results for parks in <%= @state %></h1>
 
   <% @parks.each do |park| %>
     <h3><%= park.full_name %></h3>
