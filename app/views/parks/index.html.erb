@@ -1,0 +1,15 @@
+<% if @state.present? %>
+  <h1><%= @total %> results for parks in <%= @state %></h1>
+
+  <% @parks.each do |park| %>
+    <h3><%= park.full_name %></h3>
+    <p>Description:</p><p><%= park.description %></p>
+    <p>Directions:</p><p><%= park.direction_info %></p>
+    <p>Hours:</p>
+    <% park.operation_hrs.each do |day| %>
+      <p><%= day %></p>
+    <% end %></br>
+  <% end %>
+<% else %>
+  <h3>Error:</h3><p>Please select a <%= link_to "state", root_path %>.</p>
+<% end %>
